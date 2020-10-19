@@ -1,0 +1,14 @@
+{
+    "id_payment": 1,
+    "transaction": "Briva",
+    "product_id": 1,
+    "status": 1,
+    "no_telp" : "08131532123",
+    "price": "20.000",
+    "created": 1602734470,
+    "detail": {
+        "name_provider": "Telkomsel",
+        "alias": "telkomsel",
+        "name": "Combo Sakti 100MB"
+    }
+}

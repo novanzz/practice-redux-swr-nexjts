@@ -1,0 +1,190 @@
+{
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Telkomsel",
+            "alias": "telkomsel",
+            "pricelist":[
+                {
+                    "price_id" : 1,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 2,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 3,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 4,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 5,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 30,
+                    "price" : "200.000"
+                }
+            ]
+        },
+        {
+            "product_id": 2,
+            "name": "XL",
+            "alias": "xl",
+            "pricelist":[
+                {
+                    "price_id" : 6,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 7,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 8,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 9,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 10,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 29,
+                    "price" : "200.000"
+                }
+            ]
+        },
+        {
+            "product_id": 3,
+            "name": "Smartfren",
+            "alias": "smartfren",
+            "pricelist":[
+                {
+                    "price_id" : 11,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 12,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 13,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 14,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 15,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 28,
+                    "price" : "200.000"
+                }
+            ]
+        },
+        {
+            "product_id": 4,
+            "name": "Indosat",
+            "alias": "indosat",
+            "pricelist":[
+                {
+                    "price_id" : 16,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 17,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 18,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 19,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 20,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 27,
+                    "price" : "200.000"
+                }
+            ]
+        },
+        {
+            "product_id": 5,
+            "name": "Tri",
+            "alias": "tri",
+            "pricelist":[
+                {
+                    "price_id" : 21,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 22,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 23,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 24,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 25,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 26,
+                    "price" : "200.000"
+                }
+            ]
+        },
+        {
+            "product_id": 6,
+            "name": "Mentari",
+            "alias": "mentari",
+            "pricelist":[
+                {
+                    "price_id" : 30,
+                    "price" : "10.000"
+                },
+                {
+                    "price_id" : 31,
+                    "price" : "25.000"
+                },
+                {
+                    "price_id" : 32,
+                    "price" : "50.000"
+                },
+                {
+                    "price_id" : 33,
+                    "price" : "100.000"
+                },
+                {
+                    "price_id" : 34,
+                    "price" : "150.000"
+                },
+                {
+                    "price_id" : 35,
+                    "price" : "200.000"
+                }
+            ]
+        }
+    ]
+}

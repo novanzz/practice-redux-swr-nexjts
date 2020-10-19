@@ -1,0 +1,219 @@
+{
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Telkomsel",
+            "alias": "telkomsel",
+            "pricelist":[
+                {
+                    "package_id" : 1,
+                    "name" : "Combo Sakti 100MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "10.000"
+                },
+                {
+                    "package_id" : 2,
+                    "name" : "Combo Sakti 200MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "20.000"
+                },
+                {
+                    "package_id" : 3,
+                    "name" : "Combo Sakti 300MB Telkomsel Bulk",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "30.000"
+                },
+                {
+                    "package_id" : 4,
+                    "name" : "Combo Sakti 400MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "40.000"
+                },
+                {
+                    "package_id" : 5,
+                    "name" : "Combo Sakti 500MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "50.000"
+                },
+                {
+                    "package_id" : 6,
+                    "name" : "Combo Sakti 600MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "60.000"
+                }
+            ]
+        },
+        {
+            "product_id": 2,
+            "name": "XL",
+            "alias": "xl",
+            "pricelist":[
+                {
+                    "package_id" : 7,
+                    "name" : "Combo Sakti 100MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "10.000"
+                },
+                {
+                    "package_id" : 8,
+                    "name" : "Combo Sakti 200MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "20.000"
+                },
+                {
+                    "package_id" : 9,
+                    "name" : "Combo Sakti 300MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "30.000"
+                },
+                {
+                    "package_id" : 10,
+                    "name" : "Combo Sakti 400MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "40.000"
+                },
+                {
+                    "package_id" :11,
+                    "name" : "Combo Sakti 500MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "50.000"
+                },
+                {
+                    "package_id" : 12,
+                    "name" : "Combo Sakti 600MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "60.000"
+                }
+            ]
+        },
+        {
+            "product_id": 3,
+            "name": "Smartfren",
+            "alias": "smartfren",
+            "pricelist":[
+                {
+                    "package_id" : 13,
+                    "name" : "Combo Sakti 100MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "10.000"
+                },
+                {
+                    "package_id" : 14,
+                    "name" : "Combo Sakti 200MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "20.000"
+                },
+                {
+                    "package_id" : 15,
+                    "name" : "Combo Sakti 300MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "30.000"
+                },
+                {
+                    "package_id" : 16,
+                    "name" : "Combo Sakti 400MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "40.000"
+                },
+                {
+                    "package_id" : 17,
+                    "name" : "Combo Sakti 500MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "50.000"
+                },
+                {
+                    "package_id" : 18,
+                    "name" : "Combo Sakti 600MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "60.000"
+                }
+            ]
+        },
+        {
+            "product_id": 4,
+            "name": "Indosat",
+            "alias": "indosat",
+            "pricelist":[
+                {
+                    "package_id" : 19,
+                    "name" : "Combo Sakti 100MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "10.000"
+                },
+                {
+                    "package_id" : 20,
+                    "name" : "Combo Sakti 200MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "20.000"
+                },
+                {
+                    "package_id" : 21,
+                    "name" : "Combo Sakti 300MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "30.000"
+                },
+                {
+                    "package_id" : 22,
+                    "name" : "Combo Sakti 400MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "40.000"
+                },
+                {
+                    "package_id" : 23,
+                    "name" : "Combo Sakti 500MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "50.000"
+                },
+                {
+                    "package_id" : 24,
+                    "name" : "Combo Sakti 600MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "60.000"
+                }
+            ]
+        },
+        {
+            "product_id": 5,
+            "name": "Tri",
+            "alias": "tri",
+            "pricelist":[
+                {
+                    "package_id" : 25,
+                    "name" : "Combo Sakti 100MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "10.000"
+                },
+                {
+                    "package_id" : 26,
+                    "name" : "Combo Sakti 200MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "20.000"
+                },
+                {
+                    "package_id" : 27,
+                    "name" : "Combo Sakti 300MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "30.000"
+                },
+                {
+                    "package_id" : 28,
+                    "name" : "Combo Sakti 400MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "40.000"
+                },
+                {
+                    "package_id" : 29,
+                    "name" : "Combo Sakti 500MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "50.000"
+                },
+                {
+                    "package_id" : 30,
+                    "name" : "Combo Sakti 600MB",
+                    "description" : "Paket mangkus ajaib serta sakti",
+                    "price" : "60.000"
+                }
+            ]
+        }
+    ]
+}
