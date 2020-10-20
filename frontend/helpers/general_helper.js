@@ -33,3 +33,9 @@ export const time = (timestamp) => {
   // var dateString = date + "/" +(month + 1) + "/" + year + " " + time;
   return timeLocal
 };
+
+export const numFilter = (number) => {
+  var re = /^[0-9\b]+$/g
+  var numArr = number.match(re) || [""]
+  return numArr[0]
+};

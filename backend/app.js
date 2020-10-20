@@ -9,6 +9,7 @@ const billingRoutes = require('./routes/billing');
 const packageRoutes = require('./routes/package');
 const index = require('./routes/index');
 const gt = require('./controller/genToken');
+const key = require('./config/keys')
 
 //Logging handler error
 app.use(morgan('dev'));
@@ -43,7 +44,7 @@ app.use(bodyParse.json());
 
 //connect database
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/juraganpulsa",{
+mongoose.connect(key.mongoURI,{
   useUnifiedTopology: true,
   useNewUrlParser:true
 });

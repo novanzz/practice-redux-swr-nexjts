@@ -25,7 +25,54 @@
     color: white;
 }
 
-#customers td a:hover{
-    color:rgb(65, 65, 238);
-    cursor: pointer
+#customers td a:hover {
+    color: rgb(65, 65, 238);
+    cursor: pointer;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+.search{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.wrap-search{
+    float: right;
+    width: 250px;
+}
+.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196f3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #0b7dda;
+}
+
+.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+    .wrap-search{
+        margin: 10px;
+        width: 93%;
+    }
 }

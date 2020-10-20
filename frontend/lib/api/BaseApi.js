@@ -25,6 +25,10 @@ class BaseApi {
   getDetailOrder(id) {
     return axios.post(this.baseUrl+"/api/detailorder",{order_id:id})
   }
+
+  getSearchOrder(data) {
+    return axios.post(this.baseUrl+"/api/search",data)
+  }
 }
 
 export default BaseApi;

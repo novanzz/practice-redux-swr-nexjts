@@ -1,15 +1,9 @@
-// const listPackage = require('../dummy/listPackage.json')
-const orderPackage = require('../dummy/detailPaymentPackage.json')
 const redisOp = require('../redis')
 const Product = require('../models/product')
 const Order = require('../models/order');
 const mongoose = require('mongoose');
 
-exports.package = async (req, res, next) => {
-    // const listPackage = await package()
-    // json = JSON.stringify(listPackage)
-    // const data = JSON.parse(json)
-    // res.status(200).json(data);
+exports.package = async (req, res) => {
     redisOp.createConnection().then(client => {
         client.get("list-package", async (err, reply) => {
             if (reply !== null) {
@@ -17,8 +11,8 @@ exports.package = async (req, res, next) => {
                 res.status(200).json(data);
             } else {
                 try {
-                    const listPackage = await package()
-                    json = JSON.stringify(listPackage)
+                    const packages = await getPackages()
+                    json = JSON.stringify(packages)
                     client.set("list-package", json, function (err) {
                         client.expire('list-package', 90);
                     });
@@ -32,16 +26,16 @@ exports.package = async (req, res, next) => {
     })
 }
 
-const package = async () => {
-    const response = await Product.find({ type: "package" })
+const getPackages = async () => {
+    const packages = await Product.find({ type: "package" })
         .exec()
 
-    let group = response.reduce((r, a) => {
-        r[a.alias] = [...r[a.alias] || [], a];
-        return r;
+    let group = packages.reduce((res, curr) => {
+        res[curr.alias] = [...res[curr.alias] || [], curr];
+        return res;
     }, {});
 
-    let data = []
+    let groupPackages = []
     Object.values(group).map((items, index) => {
         let dataItems = []
         items.map((item, i) => {
@@ -55,7 +49,7 @@ const package = async () => {
             }
             dataItems.push(dataItem)
         })
-        data.push({
+        groupPackages.push({
             name: items[index].name,
             alias: items[index].alias,
             type: items[index].credit,
@@ -64,12 +58,12 @@ const package = async () => {
     })
 
     const groupByProvider = {
-        "data": data
+        "data": groupPackages
     }
     return groupByProvider
 }
 
-exports.order = async (req, res, next) => {
+exports.order = async (req, res) => {
     const { phone, product_id, transaction, provider_name, price, product_name } = req.body;
     try {
         const order = new Order({
@@ -83,7 +77,7 @@ exports.order = async (req, res, next) => {
         });
         const resOrder = await order.save()
 
-        const dataJson = {
+        const dataOrder = {
             id_payment: resOrder._id,
             transaction: resOrder.transaction,
             phone: resOrder.phone,
@@ -94,7 +88,7 @@ exports.order = async (req, res, next) => {
             type: "Paket"
         }
 
-        json = JSON.stringify(dataJson)
+        json = JSON.stringify(dataOrder)
         const data = JSON.parse(json)
         res.status(200).json(data);
     } catch {

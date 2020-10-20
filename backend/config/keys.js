@@ -1,5 +1,5 @@
 module.exports={
-    mongoURI:'mongodb://localhost:27017/novan',
+    mongoURI:'mongodb://localhost:27017/juraganpulsa',
     jwtKeys:'novanganteng',
     HOST_REDIS_LOCAL : "127.0.0.1",
     HOST_REDIS_PORT : "6379",

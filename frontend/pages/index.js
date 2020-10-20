@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { useBuyCredit } from '@/actions/credit';
 import CelluarApi from '@/lib/api/celullar';
 import * as actionCreators from "@/store/actions/index";
-import { slug } from '@/helpers/general_helper';
+import { slug,numFilter } from '@/helpers/general_helper';
 
 import BaseLayout from '@/components/layouts/BaseLayout';
 import BasePage from '@/components/BasePage';
@@ -40,9 +40,10 @@ const Home = (props) => {
   })
 
   const onChangeHp = (event) => {
+    const val = numFilter(event.target.value)
     setPhone({
       ...phone,
-      phone: event.target.value
+      phone: val
     })
   }
 
@@ -127,7 +128,7 @@ const Home = (props) => {
             <div className="input-number">
               <div className="row">
                 <div className="col-9">
-                  <input id="phone" type="text" placeholder="No Handphone" onChange={event => onChangeHp(event)} />
+                  <input id="phone" type="text" placeholder="No Handphone" value={phone.phone} onChange={event => onChangeHp(event)} />
                 </div>
                 <div className="col-3">
                   <div className="dropdown">
