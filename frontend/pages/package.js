@@ -188,7 +188,7 @@ const Package = (props) => {
 export async function getStaticProps() {
   try {
     let packagePrice = [];
-    const { data } = await new CelluarApi().getPackage();
+    const { data } = await new CelluarApi(process.env.GENERAL_TOKEN).getPackage();
     packagePrice = data.data
     return {
       props: { packagePrice },

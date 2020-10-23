@@ -19,16 +19,17 @@ class BaseApi {
   // }
 
   getOrder(path) {
-    return axios.get(this.baseUrl+path)
+    return axios.get(this.baseUrl+path,this.config)
   }
   
   getDetailOrder(id) {
-    return axios.post(this.baseUrl+"/api/detailorder",{order_id:id})
+    return axios.post(this.baseUrl+"/api/detailorder",{order_id:id},this.config)
   }
 
   getSearchOrder(data) {
-    return axios.post(this.baseUrl+"/api/search",data)
+    return axios.post(this.baseUrl+"/api/search",data,this.config)
   }
+
 }
 
 export default BaseApi;

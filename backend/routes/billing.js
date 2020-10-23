@@ -4,8 +4,8 @@ const router = express.Router();
 
 const BillingControllers = require('../controller/billing');
 
-router.get('/',BillingControllers.billing);
-router.post('/payment',BillingControllers.order);
+router.get('/',checkAuth,BillingControllers.billing);
+router.post('/payment',checkAuth,BillingControllers.order);
 router.get('/test',checkAuth,BillingControllers.billing);
 
 module.exports = router;

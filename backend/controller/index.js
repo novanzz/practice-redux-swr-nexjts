@@ -1,5 +1,6 @@
 const redisOp = require('../redis')
 const Order = require('../models/order');
+var crypto = require('crypto');
 
 exports.order = async (req, res) => {
     redisOp.createConnection().then(client => {
@@ -98,4 +99,13 @@ exports.searchOrder = async (req, res) => {
             }
         });
     })
+}
+
+exports.test = (req, res) => {
+    const key = {
+        key :crypto.createHash('md5').update(req.body.username+req.body.apikey+req.body.mode).digest("hex")
+    }
+    jsonData = JSON.stringify(key)
+    const data = JSON.parse(jsonData)
+    res.status(200).json(data);
 }

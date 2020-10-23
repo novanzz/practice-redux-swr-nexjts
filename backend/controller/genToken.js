@@ -15,13 +15,11 @@ module.exports = {
                   isValid: "false"
                });
             } else if (result) {
+               //no exp
                const token = jwt.sign({
                   pws : password
                },
-                  key.jwtKeys,
-                  {
-                     expiresIn: "3h"
-                  });
+                  key.jwtKeys);
                return res.status(200).json({
                   isValid: "true",
                   token: token,

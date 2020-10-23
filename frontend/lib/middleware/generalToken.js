@@ -10,7 +10,8 @@ const getToken = async () => {
         const pw = {
             "password": "$2y$12$auIDvS9Ct4//neL4sEv.E.72Ffb5kLxvxxT33Arl2YkCwLos49AHm"
         }
-        var authToken = await axios.post("http://127.0.0.1:9000/api/gt", pw)
+        var api = process.env.API_URL+"/api/gt"
+        var authToken = await axios.post( api , pw ) 
         setCookies(authToken.data.token, "generalAuth");
         return authToken.data.token
     }

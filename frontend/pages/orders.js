@@ -74,6 +74,7 @@ const Orders = (props) => {
             <BasePage>
                 {orders &&
                     <div>
+                        {}
                         <div className="search">
                             <div className="wrap-search">
                                 <input type="text" placeholder="Number.." value={search.search} onChange={event => onSearch(event)} />
@@ -110,7 +111,7 @@ const Orders = (props) => {
 
 export async function getStaticProps() {
     try {
-        const { data } = await new BaseApi().getOrder("/api/listorder");
+        const { data } = await new BaseApi(process.env.GENERAL_TOKEN).getOrder("/api/listorder");
         return {
             props: { data },
             revalidate: 60

@@ -5,15 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "startprod": "NODE_ENV=production node server.js",
+    "prod": "node server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.0",
     "axios": "^0.20.0",
     "js-cookie": "^2.2.1",
     "next": "9.5.3",
-    "next-routes": "^1.4.2",
     "next-redux-wrapper": "^4.0.1",
+    "next-routes": "^1.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "^7.2.1",

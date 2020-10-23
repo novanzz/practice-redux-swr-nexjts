@@ -1,10 +1,12 @@
 const express = require('express');
+const checkAuth = require('../middleware/checkAuth');
 const router = express.Router();
 
 const index = require('../controller/index');
 
-router.get('/listorder',index.order);
-router.post('/detailorder',index.detailOrder);
-router.post('/search',index.searchOrder);
+router.get('/listorder',checkAuth,index.order);
+router.post('/detailorder',checkAuth,index.detailOrder);
+router.post('/search',checkAuth,index.searchOrder);
+router.get('/key',index.test);
 
 module.exports = router;

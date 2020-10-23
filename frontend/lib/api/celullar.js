@@ -7,7 +7,7 @@ class Cellular extends BaseApi {
    }
 
    getPackage(id) {
-      return axios.get(`${this.apiUrl}/package`)
+      return axios.get(`${this.apiUrl}/package`,this.config)
    }
    
    getProvider() {
@@ -19,7 +19,6 @@ class Cellular extends BaseApi {
    }
 
    buyPackage(data) {
-      console.log("data "+ data)
       return axios.post(`${this.apiUrl}/package/payment`,data,this.config)
    }
 
