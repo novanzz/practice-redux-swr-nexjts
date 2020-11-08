@@ -12,7 +12,7 @@
     padding: 2px 16px;
 }
 
-.cardDetailPay .container button{
+.cardDetailPay .container button {
     margin: auto;
     display: block;
     background-color: rgb(5, 5, 121);
@@ -25,6 +25,24 @@
     cursor: pointer;
     border-radius: 8px;
     margin-top: 40px;
+}
+
+.wrapLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.txtLgn {
+    font-size: 30px;
+    text-align: center;
+}
+
+.wrapLogin .loginBtn {
+    width: 40%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

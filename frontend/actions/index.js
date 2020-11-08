@@ -1,17 +1,14 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-export const fetcher = async (url) => {
-    try {
-        const fetchData = await axios.get(url)
-        return fetchData.data
-    } catch (err) {
-        const error = new Error('An error occurred while fetching the data.')
-        error.status = err.response.status
-        error.message = err.response.data.message
-        throw error
+export const fetcher = (url) =>
+  axios.get(url).then( res => {
+    if (res.status !== 200) {
+      return Promise.reject(result);
+    } else {
+      return res.data;
     }
-};
+  });
 
 export function useApiHandler(apiCall) {
     const [reqState, setReqState] = useState({

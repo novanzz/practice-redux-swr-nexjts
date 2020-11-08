@@ -101,6 +101,7 @@ exports.searchOrder = async (req, res) => {
     })
 }
 
+//for digiflazz
 exports.test = (req, res) => {
     const key = {
         key :crypto.createHash('md5').update(req.body.username+req.body.apikey+req.body.mode).digest("hex")

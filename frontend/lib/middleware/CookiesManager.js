@@ -3,11 +3,11 @@ import Cookie from "js-cookie";
 //post token
 
 const setCookies = (token,name) => {
-    // 2 jam
-    Cookie.set(name, token ,{ expires: new Date(Date.now() + 7200000) })
+    // 4 jam
+    Cookie.set(name, token ,{ expires: new Date(Date.now() + 14400000) })
 };
 
-const getToken = (name)=>{
+const getCookies = (name)=>{
   const authToken = Cookie.get(name);
   return authToken
 }
@@ -23,8 +23,8 @@ const tokenAuthenticated = (name) => {
     };
 };
 
-const delCookie = (name) => {
+const delCookies = (name) => {
     Cookie.remove(name);
 };
 
-export { setCookies, delCookie, tokenAuthenticated,getToken };
+export { setCookies, delCookies, tokenAuthenticated,getCookies };

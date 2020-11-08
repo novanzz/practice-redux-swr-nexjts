@@ -82,7 +82,8 @@ const Package = (props) => {
       product_id: price.id,
       product_name: price.name,
       price: price.price,
-      transaction: transfer.name
+      transaction: transfer.name,
+      member_id : props.user && props.user.sub
     }
     setMsgResult({ overlay: "overlayOn", loader: "overlayOn" })
     await buyPackage(result)
@@ -201,7 +202,8 @@ export async function getStaticProps() {
 }
 
 const mapStateToProps = state => ({
-  purchase: state.purchase.result
+  purchase: state.purchase.result,
+  user:state.user.result
 })
 
 const mapDispatchToProps = {

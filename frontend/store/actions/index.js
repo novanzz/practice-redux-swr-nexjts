@@ -5,3 +5,6 @@ export {
 export {
     increment
 } from './counter';
+export {
+    user
+} from './user';

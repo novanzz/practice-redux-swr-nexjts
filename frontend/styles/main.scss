@@ -3,6 +3,7 @@
 @import "./shared/header";
 @import "./shared/highlight";
 @import "./shared/responsive";
+@import "./shared/user";
 @import "./shared/error";
 @import "./global";
 @import "./shared/tools";
@@ -64,8 +65,18 @@ html {
 
 .container {
     padding: 20px 20% 0 20%;
-    font-size: 12px;
+    font-size: 12px; 
+    margin-bottom: 100px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+ }
 
 @media only screen and (max-width: 1024px) {
     /* For mobile phones: */

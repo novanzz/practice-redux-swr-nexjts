@@ -63,11 +63,12 @@ const getCredit = async () => {
 }
 
 exports.order = async (req, res) => {
-    const { phone, product_id, transaction, provider_name, price } = req.body;
+    const { phone, product_id, transaction, provider_name, price, member_id } = req.body;
     try {
         const order = new Order({
             _id: new mongoose.Types.ObjectId(),
             _product_id: new mongoose.Types.ObjectId(product_id),
+            member_id : member_id && member_id,
             type: "credit",
             phone: phone,
             transaction: transaction,

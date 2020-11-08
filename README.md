@@ -8,3 +8,9 @@ frontend
 backend 
 1. run : npm run dev
 2. prod : npm run start
+
+dumb db juraganpulsa.js
+
+====== note ========
+1. authentication using auth0
+2. backend didnt used user schema or userdb

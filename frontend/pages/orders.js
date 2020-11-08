@@ -74,7 +74,6 @@ const Orders = (props) => {
             <BasePage>
                 {orders &&
                     <div>
-                        {}
                         <div className="search">
                             <div className="wrap-search">
                                 <input type="text" placeholder="Number.." value={search.search} onChange={event => onSearch(event)} />

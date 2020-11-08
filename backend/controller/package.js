@@ -64,7 +64,7 @@ const getPackages = async () => {
 }
 
 exports.order = async (req, res) => {
-    const { phone, product_id, transaction, provider_name, price, product_name } = req.body;
+    const { phone, product_id, transaction, provider_name, price, product_name,member_id } = req.body;
     try {
         const order = new Order({
             _id: new mongoose.Types.ObjectId(),
@@ -72,6 +72,7 @@ exports.order = async (req, res) => {
             type: "package",
             phone: phone,
             transaction: transaction,
+            member_id : member_id && member_id,
             status: 1,
             created_at: new Date()
         });

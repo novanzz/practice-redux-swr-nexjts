@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const billingRoutes = require('./routes/billing');
 const packageRoutes = require('./routes/package');
+const authRoutes = require('./routes/user');
 const index = require('./routes/index');
 const gt = require('./controller/genToken');
 const key = require('./config/keys')
@@ -52,6 +53,7 @@ mongoose.connect(key.mongoURI,{
 // Routes
 app.use('/api/billing', billingRoutes);
 app.use('/api/package', packageRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api', index);
 app.post('/api/gt', gt.gen_token);
   

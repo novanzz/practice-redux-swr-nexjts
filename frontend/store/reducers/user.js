@@ -5,13 +5,13 @@ const initialState = {
     result: null
 };
 
-const increment = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.INCREMENT:
+        case actionTypes.USER:
             return updateObject(state,{result:action.result})
         default:
             return state
     }
 };
 
-export default increment;
+export default reducer;

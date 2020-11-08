@@ -6,6 +6,7 @@ import { useBuyCredit } from '@/actions/credit';
 import CelluarApi from '@/lib/api/celullar';
 import * as actionCreators from "@/store/actions/index";
 import { slug,numFilter } from '@/helpers/general_helper';
+import { useGetUser0 } from '@/actions/user';
 
 import BaseLayout from '@/components/layouts/BaseLayout';
 import BasePage from '@/components/BasePage';
@@ -14,11 +15,15 @@ import TabMenu from '@/components/shared/TabMenu';
 
 // sementara
 import { Loading, Modal } from "@/components/shared/tools";
+import { user } from '../store/actions';
 
 const Home = (props) => {
   const { providerPrice, errorStaticProps } = props
   const router = useRouter();
   const [buyCredit] = useBuyCredit()
+  
+  //auth0
+  const {responData, loadingSWR} = useGetUser0()
 
   //dummy
   const metodTf = [{name:"ovo"}, {name:"gopay"}, {name:"bri"},{name:"bca"},{name:"mandiri"}]
@@ -77,7 +82,8 @@ const Home = (props) => {
       phone: phone.phone,
       product_id: price.id,
       price: price.price,
-      transaction: transfer.name
+      transaction: transfer.name,
+      member_id : props.user && props.user.sub
     }
     setMsgResult({ overlay: "overlayOn", loader: "overlayOn" })
     await buyCredit(result)
@@ -118,6 +124,8 @@ const Home = (props) => {
   return (
     <BaseLayout
       error={errorStaticProps}
+      // user={responData}
+      // loading={loadingSWR}
     >
       <BasePage>
         <Highlight />
@@ -195,7 +203,8 @@ export async function getStaticProps() {
 
 export const mapStateToProps = state => {
   return {
-    purchase: state.purchase.result
+    purchase: state.purchase.result,
+    user:state.user.result
   }
 };
 

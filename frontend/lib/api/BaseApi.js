@@ -14,9 +14,13 @@ class BaseApi {
     this.baseUrl = process.env.API_URL ;
   }
 
-  // getAll() {
-  //   return axios.get(this.apiUrl)
-  // }
+  login(data) {
+    return axios.post(this.baseUrl+"/api/auth/login",data,this.config)
+  }
+
+  getUser(data){
+    return axios.post(this.baseUrl+"/api/auth/user",data,this.config)
+  }
 
   getOrder(path) {
     return axios.get(this.baseUrl+path,this.config)
